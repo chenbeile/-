@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'leon-icon';  /* project id 307748 */
+  src: url('//at.alicdn.com/t/font_381c6lxizoajor.eot');
+  src: url('//at.alicdn.com/t/font_381c6lxizoajor.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_381c6lxizoajor.woff') format('woff'),
+  url('//at.alicdn.com/t/font_381c6lxizoajor.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_381c6lxizoajor.svg#iconfont') format('svg');
+}
+* {
+  margin：0；
+  padding：0；
+}
+body {
+  font-family: arial;
+}
+.layout {
+  width: 900px;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+.portrait img {
+  float: left;
+  margin: 60px 30px;
+  width: 180px;
+  box-shadow: rgba(0,0,0,.5) 0 4px 8px 0px;
+  border-radius: 50%
+ 
+}
+.myname {
+  float: left;
+  margin-top: 68px;
+  text-align: center;
+}
+.myname h1,.myname p {
+  margin: 0;
+}
+.contacts {
+  float: right;
+  width: 300px;
+  /* border: 1px solid; */
+  margin: 30px 0;
+}
+.contacts h5 {
+  border-bottom: 2px solid;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.record ul {
+  border-left: 1px solid;
+  margin-left: 24px;
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 40px;
+  
+}
+.record li {
+  position: relative;
+  top: -12px;
+}
+.record h3 {
+  width: 400px;
+  margin-left: 20px;
+  border-bottom: 1px solid;
+}
+.act,.skills {
+  display: inline-block;
+  width: 400px;
+  vertical-align: top;
+  margin-left: 30px;
+  margin-bottom: 80px;
+  /* border: 1px solid; */
+}
+.act li {
+  list-style: none;
+  margin-left: -48px;
+   border: 0px solid; 
+}
+.skills li {
+  float: left;
+  width: 180px;
+  line-height: 6em;
+  list-style: none;
+  margin-right: 40px;
+  margin-left: -48px;
+}
+.icon {
+  font-size: 22px;
+  font-family: leon-icon;
+  vertical-align: middle;
+}
