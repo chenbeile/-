@@ -49,9 +49,9 @@ body {
   clear: both;
 }
 .record ul {
-  border-left: 1px solid;
+  border-left: 2px solid;
   margin-left: 24px;
-  padding-left: 14px;
+  padding-left: 10px;
   position: relative;
   margin-bottom: 40px;
   
