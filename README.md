@@ -1,2 +1,1 @@
-# 我的简历
-[点击浏览](https://chenbeile.github.io/My-Resume/html/jianli.html )
+[# 我的简历](https://chenbeile.github.io/My-Resume/html/jianli.html )
