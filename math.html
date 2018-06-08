@@ -1,0 +1,129 @@
+<script>
+
+//写一个函数，返回从min到max之间的随机整数，包括min不包括max。
+
+Math.random() //取一个0-1的随机数
+Math.floor(Math.random()*10) //往下取一个0-9的随机整数
+Math.floor(Math.random()*10)+1 //1-10的随机整数
+
+//得到[a,b)随机数
+function random(a,b){
+    return a+Math.floor(Math.random()*(b-a))
+}
+
+var arr=[]
+for (var i=0,i <50;i++){
+    arr.push(random(0,10))
+}
+console.log(arr)
+
+//得到一个长度为n随机字符串
+function getRandStr(numb){
+  var str = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890"
+  var getStr = "";
+  for(var i = 0;i <numb;i++){
+    var getNumb = Math.floor(Math.random()*62);
+    getStr = getStr + str[getNumb];
+  }
+  return getStr;
+}
+console.log(getRandStr(3));
+
+//得到一个随机IP 0.0.0.0 ~255.255.255.255
+function randomIP(len){
+var str="";
+for(var i=0,i<4,i++){
+  var getNumb=Math.floor(1+Math.random()*255)
+  str=str+getNumb+".";
+}
+str=str.substr(0,str.length-1);
+return str;
+}
+
+
+//写一个函数，生成一个随机颜色字符串，合法的颜色为#000000~ #ffffff
+
+function randomColor(){
+  var getstr='0123456789abcdef';
+  var str="";
+  for(var i=0,i<6,i++){
+    var getNumb=Math.floor(Math.random()*16+1);
+    str=str+getstr[getNumb];
+  }
+  str='#'+str;
+  return str
+}
+var color=randomColor();
+console.log(color);
+
+
+var arr=[]
+var reg = /[^abc123]/;
+var reg2=/[0-9a-zA-Z]/
+var str='haha'
+str.match(reg)//默认匹配到一个就停止，正则表达式
+
+reg = /[^abc123]/g//匹配全局，正则表达式
+str.match(reg)
+
+
+//贪婪模式
+
+"a123456b678cde".match(/[a-z]\d?/g) //匹配到a到z中的一个字母，后面有数字0个或一个
+"a123456b678cde".match(/[a-z]\d+/g) //匹配到a到z中的一个字母，后面有数字1个或多个
+"a123456b678cde".match(/[a-z]\d*/g) //匹配到a到z中的一个字母，后面有数字0个或多个
+"a123456b678cde".match(/[a-z]\d{4}/g) //匹配到a到z中的一个字母，后面有数字4个
+"a123456b678cde".match(/[a-z]\d{1,3}/g) //匹配到a到z中的一个字母，后面有数字1个到3个
+"a123456b678cde".match(/[a-z]\d?/g) //匹配到a到z中的一个字母，后面有数字0个或一个
+
+//非贪婪模式
+"a123456b678cde".match(/[a-z]\d??/g) //匹配到a到z中的一个字母，后面有数字尽量是0个
+
+function isPhoneNumber(str){
+return /^1\d{10}$/.test(str)
+}
+
+var reg=/\d/g;
+var r=reg.exec('a1b2c3');//exec
+
+var str2='hallo jirengu,hbllo world,hcllo chenbeile'
+var reg=/h[a-z]llo/g
+
+var result=reg.exec(str2)
+console.log(result)
+
+document.querySelector(#ct)
+document.querySelectorAll('#ct.title')
+
+node.classList.add('active')
+node.classList.remove('active')
+node.classList.contains('active')
+
+//javascript事件
+
+
+
+function clickCancel(){
+  console.log('haha')
+}
+
+var cancel=document.querySelector('#cancel')
+cancel.onclick=function(){
+  console.log('heihei')
+
+}
+
+
+cancel.addEventListener('click'.function(){
+  console.log('hello')
+})
+
+
+
+var button =document.querySelector('button')
+button.addEventListener('click',function(e){
+  console.log(this)
+  console.log(this.innerText)
+  console.log(e.target)
+})
+</script>

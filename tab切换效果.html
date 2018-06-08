@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+  padding: 0;
+  margin:0;
+  list-style:none;
+}
+.clearfix:after{
+  content:'';
+  display:block;
+  clear:both;
+}
+.wrap{
+border:1px solid #607d8b;
+  border-radius:4px;
+}
+.nav{
+  border-bottom:1px solid #ccc;
+}
+.nav>li{
+  cursor:pointer;
+  color:black;
+  float:left;
+  width:30%;
+  border:1px solid #fff;
+  text-align:center;
+  line-height:1.5;
+  border-radius:10%;
+}
+.nav .active{
+  border:1px solid #ccc;
+  border-bottom-color:#fff;
+margin-bottom:-1px;
+  color:red;
+}
+.content>li{
+  height:200px;
+  padding:20px;
+  margin-top:1px;
+  display:none;
+}
+.content .active{
+  display:block;
+}
+        </style>
+    </head>
+<body>
+  <div class="wrap">
+      <ul class='nav clearfix'>
+        <li class='active'>Tab1</li>
+        <li>Tab2</li>
+        <li>Tab3</li>
+      </ul>
+      <ul class='content'>
+        <li class='active'>内容1</li>
+        <li>内容2</li>
+        <li>内容3</li>
+      </ul>
+  </div>
+  <script>
+	var nav = document.querySelector('.nav');
+	var header = document.querySelectorAll('.nav>li');
+	var content = document.querySelectorAll('.content>li');
+
+	nav.addEventListener('click', function(e){
+		var node = e.target;
+		if(node.tagName.toLowerCase() === 'li'){
+			for(var i=0; i < header.length; i++){
+				header[i].classList.remove('active');
+			}
+			node.classList.add('active');
+
+			var index = [].indexOf.call(header, node);
+			console.log(index);
+
+			for(var i=0; i < content.length; i++){
+				content[i].classList.remove('active');
+			}
+			content[index].classList.add('active');
+
+		}
+	})		
+
+  </script>
+  </body>
+</html>

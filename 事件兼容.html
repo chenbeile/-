@@ -1,0 +1,54 @@
+<script>
+
+var button=document.queryselector('button')
+var box=document.queryselector('.box')
+
+button.addEventListener('click',function(e){
+    console.log(this)
+    console.log(this.innerText)
+    console.log(e.target)
+}) 
+
+box.addEventListener('click',function(e){
+    console.log(this)
+    console.log(this.innerText)
+    console.log(e.target)
+})
+
+//ie浏览器
+box.attachEvent('onclick',function(e){
+    console.log(this)
+    console.log(this.innerText)
+    console.log(e.target)
+})
+
+
+
+function addEvent(node,type,handler){
+
+}
+
+var node=document.getElementsByClassName('.box')[0]
+addEvent(node,'click',function(e){
+    console.log(e)
+    console.log(this)
+})
+
+
+node['eclickfunction(){xxx}']=function(e){
+    console.log(e)
+    console.log(this)
+}
+node['clickfunction(){xxx}']=function(){
+    node['eclickfunction(){xxx}'](window.event)
+}
+
+
+//jquery解决兼容问题的例子
+$('#btn').on('click',function(e){
+    e.preventDefault()
+    e.stopPropagation()
+})
+
+
+</script>
