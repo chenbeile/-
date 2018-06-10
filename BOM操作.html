@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    window.history.back  //后退
+    window.history.forward  //前进
+    window.history.go(1)  //前进
+    window.history.go(-1)  //后退
+    //控制台可以-2， -3 ，+2，+3 
+
+    window.innerHeight
+ //   799  innerHeight不包括tab栏和地址栏
+
+ window.location.href="https://www.baidu.com/" //操作刷新按钮和地址栏
+ window.location="https://www.baidu.com/"
+location.protocol
+location.hostname
+location.port
+location.pathname
+location.search
+location.hash
+location.origin
+
+window.name
+window.navigator
+window.outerHeight
+window.parent
+window.screen
+window.self
+window.top
+window.open(url.windowName.windowFeatures)
+//在页面正中央打开一个指定宽高的window
+
+
+var fnArr = [];
+    for (var i = 0; i < 10; i ++) {
+        fnArr[i] =  function(){
+    	    return i;
+        };
+    }
+    a=fnArr[3]()
+    console.log( a );  //
+    </script>
+</body>
+</html>
